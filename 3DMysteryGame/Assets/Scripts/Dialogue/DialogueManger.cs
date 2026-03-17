@@ -1,80 +1,91 @@
-using UnityEngine;
-using TMPro;
 using System.Threading;
-using unityEngine.UI;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class DialogueManger : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
- public DialogueManger instance {  get; private set; }
-    //UI elements
-    public GameObject DialogueParent;//Main container for the dialogue UI
-    public TextMeshProUGUI DialogueTitleText, DialogueText;//Text component for Title and the dialogue text
-    public GameObject responseButtonContainer;//Container to hold the response button 
+    public static DialogueManager Instance { get; private set; }
+
+    // UI references
+    public GameObject DialogueParent; // Main container for dialogue UI
+    public TextMeshProUGUI DialogTitleText, DialogBodyText; // Text components for title and body
+    public GameObject responseButtonPrefab; // Prefab for generating response buttons
+    public Transform responseButtonContainer; // Container to hold response buttons
 
     private void Awake()
     {
-        if (instance == null)
+        // Singleton pattern to ensure only one instance of DialogueManager
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
-        { 
+        {
             Destroy(gameObject);
         }
-        //initially hide the dialogue UI
+
+        // Initially hide the dialogue UI
         HideDialogue();
     }
 
-    //start the dialogue with given Title and Dialogue Node
-    public void StartDialogue(string title, DialogueNode Node)
+    // Starts the dialogue with given title and dialogue node
+    public void StartDialogue(string title, DialogueNode node)
     {
-        //Display the Dialogue UI
+        // Display the dialogue UI
         ShowDialogue();
 
-        //set Dialogue Title and Text
-        DialogueTitleText.text = title;
-        DialogueText.text = Node.dialogueText;
-        
-        // remove any existing response buttons
+        // Set dialogue title and body text
+        DialogTitleText.text = title;
+        DialogBodyText.text = node.dialogueText;
+
+        // Remove any existing response buttons
         foreach (Transform child in responseButtonContainer)
         {
             Destroy(child.gameObject);
         }
 
-        //create and setup response buttons based on the current dialogue node 
-        foreach (DialogueResponse response in Node.response)
+        // Create and setup response buttons based on current dialogue node
+        foreach (DialogueResponse response in node.responses)
         {
-            GameObject buttonObj = instantiate(responseButtonPrefab, responseButtonContainer);
+            GameObject buttonObj = Instantiate(responseButtonPrefab, responseButtonContainer);
             buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
 
-            //setup button to trigger selectResponse when clicked 
+            // Setup button to trigger SelectResponse when clicked
             buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
         }
     }
 
-    //Handle response selection and triggers the next dialogue node
+    // Handles response selection and triggers next dialogue node
     public void SelectResponse(DialogueResponse response, string title)
     {
-        // Check if there's a follow-up node 
-        if (response.nextNode.IsLastNode)
+        // Check if there's a follow-up node
+        if (!response.nextNode.IsLastNode())
         {
-            StartDialogue(title, response.nextNode); // start Next Dialogue
+            StartDialogue(title, response.nextNode); // Start next dialogue
         }
         else
         {
+            // If no follow-up node, end the dialogue
             HideDialogue();
         }
     }
 
-    //Hide the dialogue UI
+    // Hide the dialogue UI
     public void HideDialogue()
     {
         DialogueParent.SetActive(false);
     }
 
-    //Show the dialogue UI
-    public void ShowDialogue()
+    // Show the dialogue UI
+    private void ShowDialogue()
     {
         DialogueParent.SetActive(true);
+    }
+
+    // Check if dialogue is currently active
+    public bool IsDialogueActive()
+    {
+        return DialogueParent.activeSelf;
     }
 }

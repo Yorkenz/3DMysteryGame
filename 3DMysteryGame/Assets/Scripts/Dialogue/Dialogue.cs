@@ -1,8 +1,8 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue System/Dialogue")]
-public class Dialogue : MonoBehaviour
+[CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/Dialogue Asset")]
+public class Dialogue : ScriptableObject
 {
-   //first node of the conversation
-   public DialogueNode RootNode;
+    //First node of the conversation
+    public DialogueNode RootNode;
 }

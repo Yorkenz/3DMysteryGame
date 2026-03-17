@@ -2,19 +2,13 @@ using UnityEngine;
 
 public class Actor : MonoBehaviour
 {
-    public string name;
+    public string Name;
     public Dialogue Dialogue;
 
-    private void update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SpeakTo();
         }
     }
-    // this triggers the dialogue for the actor.
-    public void SpeakTo()
-    {
-        Dialogue.Instance.StartDialogue(name, Dialogue.RootNode);
-    }
-}

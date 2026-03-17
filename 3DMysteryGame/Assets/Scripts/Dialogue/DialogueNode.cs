@@ -1,13 +1,14 @@
-using UnityEngine;
+using System;
+using System.Collections.Generic;
 
-[system.Serializable]
-public class DialogueNode : MonoBehaviour
+[System.Serializable]
+public class DialogueNode
 {
-  public string dialogueText;
-  public list<DialogueResponse> responses;
+    public string dialogueText;
+    public List<DialogueResponse> responses;
 
     internal bool IsLastNode()
     {
-        return responses.count == 0;
+        return responses.Count <= 0;
     }
 }
