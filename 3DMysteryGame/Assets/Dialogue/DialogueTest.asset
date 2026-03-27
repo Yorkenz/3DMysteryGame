@@ -13,13 +13,34 @@ MonoBehaviour:
   m_Name: DialogueTest
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   RootNode:
-    dialogueText: my name is
+    dialogueText: 'scary magic scroll '
     responses:
-    - responseText: What?
+    - responseText: read
       nextNode:
-        dialogueText: slim dog
-        responses: []
-    - responseText: get away (HIGH PITCH)
+        dialogueText: 'it speaks of tales of evil '
+        responses:
+        - responseText: 'Read more '
+          nextNode:
+            dialogueText: 'The Scroll consumes the reader '
+            responses:
+            - responseText: you died
+              nextNode:
+                dialogueText: YOU REALLY DIED
+                responses: []
+    - responseText: 'scary '
       nextNode:
-        dialogueText: 
-        responses: []
+        dialogueText: 'with those words lingering in the air the scroll looks at
+          you with dark eyes that appear on the pages '
+        responses:
+        - responseText: 'do you have a mouth '
+          nextNode:
+            dialogueText: YES
+            responses:
+            - responseText: 'lets get to it then '
+              nextNode:
+                dialogueText: 
+                responses: []
+        - responseText: 'throw it on the ground and run '
+          nextNode:
+            dialogueText: 
+            responses: []

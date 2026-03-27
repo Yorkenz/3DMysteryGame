@@ -1,5 +1,7 @@
+using StarterAssets;
 using System.Threading;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +40,7 @@ public class DialogueManager : MonoBehaviour
         // Set dialogue title and body text
         DialogTitleText.text = title;
         DialogBodyText.text = node.dialogueText;
+        
 
         // Remove any existing response buttons
         foreach (Transform child in responseButtonContainer)
@@ -47,9 +50,10 @@ public class DialogueManager : MonoBehaviour
 
         // Create and setup response buttons based on current dialogue node
         foreach (DialogueResponse response in node.responses)
-        {
+        { 
             GameObject buttonObj = Instantiate(responseButtonPrefab, responseButtonContainer);
             buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+            
 
             // Setup button to trigger SelectResponse when clicked
             buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response, title));
@@ -75,6 +79,9 @@ public class DialogueManager : MonoBehaviour
     public void HideDialogue()
     {
         DialogueParent.SetActive(false);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Show the dialogue UI
@@ -88,4 +95,8 @@ public class DialogueManager : MonoBehaviour
     {
         return DialogueParent.activeSelf;
     }
+
+    //type out the dialogue text letter by letter with a delay
+   // public void TypeDialogueText(string text)
+    
 }
