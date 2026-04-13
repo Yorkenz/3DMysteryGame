@@ -12,5 +12,6 @@ public class DialogueNode
     internal bool IsLastNode()
     {
         return responses.Count <= 0;
+       
     }
 }

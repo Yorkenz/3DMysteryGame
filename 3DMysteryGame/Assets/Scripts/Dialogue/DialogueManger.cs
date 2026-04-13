@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     // Starts the dialogue with given title and dialogue node
     public void StartDialogue(string title, DialogueNode node)
     {
+        Time.timeScale = 0f; 
         // Display the dialogue UI
         ShowDialogue();
 
@@ -72,6 +73,7 @@ public class DialogueManager : MonoBehaviour
         {
             // If no follow-up node, end the dialogue
             HideDialogue();
+            Time.timeScale = 1f;
         }
     }
 
