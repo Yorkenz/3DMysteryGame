@@ -6,6 +6,7 @@ public class WanderAi : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float rotSpeed = 5f;
+   public float WaitForSeconds = 2f;
 
     private bool isWandering = false;
     private bool isRotatingLeft = false;
@@ -24,24 +25,24 @@ public class WanderAi : MonoBehaviour
         if (isRotatingRight == true)
         {
             transform.Rotate(transform.up * Time.deltaTime * rotSpeed);
-            Debug.Log("Rotating Right");
+            
         }
         if (isRotatingLeft == true)
         {
             transform.Rotate(transform.up * Time.deltaTime * -rotSpeed);
-            Debug.Log("Rotating Left");
+            
         }
         if (isWalking == true)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            Debug.Log("Walking");
+            
         }
 
     }
     IEnumerator Wander()
     {
-        int rotTime = Random.Range(1, 3);
-        int rotateWait = Random.Range(1, 4);
+        int rotTime = Random.Range(1, 1);
+        int rotateWait = Random.Range(1, 3);
         int walkWait = Random.Range(1, 4);
         int walkTime = Random.Range(1, 5);
         isWandering = true;

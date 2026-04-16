@@ -6,9 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/0.MainMenu.unity
+    guid: b54ccd3192c47ce4c8d0ac755928f6d4
+  - enabled: 1
+    path: Assets/Scenes/1.Office.unity
+    guid: 950f8cab35a13b34d96acc1d4558e4d0
+  - enabled: 1
+    path: Assets/Scenes/2.CaseOne.unity
+    guid: 2e440356043a6704ab6eeb31adb1fd9a
+  - enabled: 1
+    path: Assets/Scenes/3.CaseTwo.unity
+    guid: c6a83f903418b7048b9abc4a056c184d
+  - enabled: 1
+    path: Assets/Scenes/4.CaseThree.unity
+    guid: 72f8f4c93aefd054f90565b0e1e93bc9
+  - enabled: 1
+    path: Assets/Scenes/5.CaseFour.unity
+    guid: 6c782ee630849fe42b7c4007304c6ac7
+  - enabled: 0
     path: Assets/Scenes/AndyTesting.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Scenes/ChristianTesting.unity
+    guid: 165eb7383812ad640bbca5295f5cee31
   m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 0d3ff0a0d2679b74e83dc85e25f1822f, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3126dcbaf04d7f54f9e49225f78e6643, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5fce9c7306b82754cb442714e58e13af, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

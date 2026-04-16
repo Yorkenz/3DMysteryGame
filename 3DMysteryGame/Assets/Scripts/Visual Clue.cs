@@ -1,9 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using System.Threading;
+using System.Timers;
 
 public class VisualClue : MonoBehaviour
 {
     private Material objectMaterial;
+    float intensity = 0f;
+    float CIntensity = .1f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,8 +16,9 @@ public class VisualClue : MonoBehaviour
 
         StartCoroutine(GlowRoutine(true));
     }
+    
 
-    public void SetGlow(bool enable, Color glowColor, float intensity = 1f)
+    public void SetGlow(bool enable, Color glowColor, float intensity)
     {
         if (enable)
         {
@@ -39,6 +45,13 @@ public class VisualClue : MonoBehaviour
                 SetGlow(true, Color.blue, intensity * 3f);
                 yield return null;
             }
+        }
+    }
+    void Update()
+    {
+        if (intensity <= 0f)
+        {
+            intensity += CIntensity * Time.deltaTime;
         }
     }
 }
