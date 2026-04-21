@@ -34,7 +34,7 @@ public class VisualClue : MonoBehaviour
     {
         if (startGlowing)
         {
-            float duration = 2.0f;
+            float duration = 10.0f;
             float startTime = Time.time;
             while (Time.time - startTime < duration)
             {
