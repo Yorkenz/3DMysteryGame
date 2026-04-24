@@ -1,17 +1,23 @@
+using TMPro;
 using UnityEngine;
 
 public class triggerNewAction : MonoBehaviour
 {
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public TextMeshProUGUI TextTriggerOff;
+    public TextMeshProUGUI TextTriggerOn;
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            TextTriggerOff.gameObject.SetActive(false);
+            //TextTriggerOn.gameObject.SetActive(true);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        { 
+            TextTriggerOn.gameObject.SetActive(true);
+        }
     }
 }
