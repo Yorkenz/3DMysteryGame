@@ -9,14 +9,14 @@ public class triggerNewAction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            TextTriggerOff.gameObject.SetActive(false);
             //TextTriggerOn.gameObject.SetActive(true);
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        { 
+        {
+            TextTriggerOff.gameObject.SetActive(false);
             TextTriggerOn.gameObject.SetActive(true);
         }
     }
