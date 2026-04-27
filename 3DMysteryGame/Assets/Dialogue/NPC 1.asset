@@ -13,34 +13,35 @@ MonoBehaviour:
   m_Name: NPC 1
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   RootNode:
-    dialogueText: 'scary magic scroll '
+    dialogueText: Hey, I swear I saw a guy like you on TV before.
     responses:
-    - responseText: read
+    - responseText: '"Really?"'
       nextNode:
-        dialogueText: 'it speaks of tales of evil '
+        dialogueText: 'I uh.... I think it was you uh.... '
         responses:
-        - responseText: 'Read more '
+        - responseText: '"huh?"'
           nextNode:
-            dialogueText: 'The Scroll consumes the reader '
+            dialogueText: I found HiM!!! I Fou..............
             responses:
-            - responseText: you died
+            - responseText: '"Hey uh...... mister?"'
               nextNode:
-                dialogueText: YOU REALLY DIED
+                dialogueText: Who are you again?
                 responses: []
-    - responseText: 'scary '
+    - responseText: 'Well. I think you found him... '
       nextNode:
-        dialogueText: 'with those words lingering in the air the scroll looks at
-          you with dark eyes that appear on the pages '
+        dialogueText: I knew it, you were the famous detective i've seen around.
         responses:
-        - responseText: 'do you have a mouth '
+        - responseText: Well, If you don't mind, would mind helping me out with this
+            missing child per chance?
           nextNode:
-            dialogueText: YES
+            dialogueText: Oh, I Know About this child....
             responses:
-            - responseText: 'lets get to it then '
+            - responseText: '"what info do you got on him?"'
               nextNode:
-                dialogueText: 
-                responses: []
-        - responseText: 'throw it on the ground and run '
-          nextNode:
-            dialogueText: 
-            responses: []
+                dialogueText: He'd play around the park with a ball of sorts....
+                  but all i remember seeing is thhe ball now....
+                responses:
+                - responseText: Alright,find a ball it is then.
+                  nextNode:
+                    dialogueText: Give me ye autograph when you finish.
+                    responses: []
