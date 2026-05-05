@@ -12443,6 +12443,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7291474826228493847, guid: 9832051073f63ec4e94669d2ece3d111, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.161317
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291474826228493847, guid: 9832051073f63ec4e94669d2ece3d111, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.948792
+      objectReference: {fileID: 0}
     - target: {fileID: 8270292587809530207, guid: 9832051073f63ec4e94669d2ece3d111, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 9
