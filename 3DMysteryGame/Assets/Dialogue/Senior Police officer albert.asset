@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
+  m_Name: Senior Police officer albert
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  RootNode:
+    dialogueText: 
+    responses:
+    - responseText: '"Really?"'
+      nextNode:
+        dialogueText: 'I uh.... I think it was you uh.... '
+        responses:
+        - responseText: '"huh?"'
+          nextNode:
+            dialogueText: I found HiM!!! I Fou..............
+            responses:
+            - responseText: '"Hey uh...... mister?"'
+              nextNode:
+                dialogueText: Who are you again?
+                responses: []
+    - responseText: 'Well. I think you found him... '
+      nextNode:
+        dialogueText: I knew it, you were the famous detective i've seen around.
+        responses:
+        - responseText: Well, If you don't mind, would mind helping me out with this
+            missing child per chance?
+          nextNode:
+            dialogueText: Oh, I Know About this child....
+            responses:
+            - responseText: '"what info do you got on him?"'
+              nextNode:
+                dialogueText: He'd play around the park with a ball of sorts....
+                  but all i remember seeing is thhe ball now....
+                responses:
+                - responseText: Alright,find a ball it is then.
+                  nextNode:
+                    dialogueText: Give me ye autograph when you finish.
+                    responses: []
