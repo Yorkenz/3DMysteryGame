@@ -23,12 +23,8 @@ MonoBehaviour:
         responses:
         - responseText: 'of course '
           nextNode:
-            dialogueText: I found HiM!!! I Fou..............
-            responses:
-            - responseText: '"Hey uh...... mister?"'
-              nextNode:
-                dialogueText: Who are you again?
-                responses: []
+            dialogueText: 
+            responses: []
         - responseText: anymore information
           nextNode:
             dialogueText: ' ya, check over by the moneument and ask them. That was
@@ -40,7 +36,7 @@ MonoBehaviour:
                 responses: []
     - responseText: not so good man.
       nextNode:
-        dialogueText: really? well sorry to sour the mood even more but we got a
+        dialogueText: really? well sorry, to sour the mood even more but we got a
           case that we need you for.
         responses:
         - responseText: It's alright lets hear it.
@@ -64,16 +60,20 @@ MonoBehaviour:
                 responses: []
         - responseText: 'I don''t wanna '
           nextNode:
-            dialogueText: there is a missing child that was reported to use 5 minutes
-              ago and we need you to look into it the killer might still be near
-              by.
+            dialogueText: I don't care if you feel like doing your job just do it
+              there is a missing child that was reported to use 5 minutes ago and
+              we need you to look into it the killer might still be near by.
             responses:
             - responseText: nu uh
               nextNode:
                 dialogueText: ' Get the hell out of here and do your job before you
                   lose it! these younger guys don''t do anything now a days right
                   bartender.'
-                responses: []
+                responses:
+                - responseText: 
+                  nextNode:
+                    dialogueText: 
+                    responses: []
             - responseText: 'fine... can i get a drink first '
               nextNode:
                 dialogueText: NO get the hell out of here and do your job!

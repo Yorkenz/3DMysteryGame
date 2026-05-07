@@ -25,7 +25,7 @@ MonoBehaviour:
             responses:
             - responseText: 'just walk away '
               nextNode:
-                dialogueText: 
+                dialogueText: ...
                 responses: []
             - responseText: 'please walk away '
               nextNode:
@@ -35,7 +35,7 @@ MonoBehaviour:
                   nextNode:
                     dialogueText: ...
                     responses: []
-        - responseText: 'alright buddy your under arrest '
+        - responseText: 'are you alright?  '
           nextNode:
             dialogueText: ...
             responses:

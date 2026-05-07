@@ -36,7 +36,7 @@ MonoBehaviour:
               nextNode:
                 dialogueText: 'fine what else do you want to know '
                 responses:
-                - responseText: 'is it always this foggy in this town '
+                - responseText: 'is it always this foggy in this town? '
                   nextNode:
                     dialogueText: 'ya if thats all then give me the 10 '
                     responses:
@@ -46,4 +46,8 @@ MonoBehaviour:
     - responseText: but what if i give you a quick $5
       nextNode:
         dialogueText: 'not enough '
-        responses: []
+        responses:
+        - responseText: 'alright '
+          nextNode:
+            dialogueText: 
+            responses: []

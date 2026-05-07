@@ -23,7 +23,11 @@ MonoBehaviour:
         - responseText: 'do you know where they went off to '
           nextNode:
             dialogueText: 'no i don''t recall where they went '
-            responses: []
+            responses:
+            - responseText: 'alright then have a good evening '
+              nextNode:
+                dialogueText: 
+                responses: []
     - responseText: 'your under arrest '
       nextNode:
         dialogueText: 'for what '
@@ -37,7 +41,11 @@ MonoBehaviour:
               nextNode:
                 dialogueText: 'he went to the left pathway i don''t know anything
                   more '
-                responses: []
+                responses:
+                - responseText: good
+                  nextNode:
+                    dialogueText: 
+                    responses: []
             - responseText: 'no! '
               nextNode:
                 dialogueText: 'then what kid? '
@@ -46,4 +54,7 @@ MonoBehaviour:
                   nextNode:
                     dialogueText: 'he went to the left pathway i don''t know anything
                       more '
-                    responses: []
+                    responses:
+                    - responseText: 'great answer '
+                      nextNode:
+                        dialogueText: 

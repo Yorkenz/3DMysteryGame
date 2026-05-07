@@ -18,7 +18,11 @@ MonoBehaviour:
     - responseText: 'have you seen a child around here recently '
       nextNode:
         dialogueText: 'no now get away '
-        responses: []
+        responses:
+        - responseText: okay
+          nextNode:
+            dialogueText: 
+            responses: []
     - responseText: 'can i sit with you and tak '
       nextNode:
         dialogueText: 'No i don''t even know you '

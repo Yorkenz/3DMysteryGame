@@ -19,8 +19,10 @@ public class RaycastTalk : MonoBehaviour
         if (value.isPressed)
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            
             if (Physics.Raycast(ray, out RaycastHit hitInfo, 5f))
             {
+                //Debug.Log(hitInfo.collider.gameObject.name);
                 Actor actor = hitInfo.collider.GetComponent<Actor>();
                 if (actor != null)
                 {

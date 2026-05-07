@@ -18,8 +18,16 @@ MonoBehaviour:
     - responseText: 'no '
       nextNode:
         dialogueText: It's just one of those days then.
-        responses: []
+        responses:
+        - responseText: 'okay then '
+          nextNode:
+            dialogueText: 
+            responses: []
     - responseText: 'ya you make great music man '
       nextNode:
         dialogueText: 'great now leave me alone '
-        responses: []
+        responses:
+        - responseText: okay
+          nextNode:
+            dialogueText: 
+            responses: []

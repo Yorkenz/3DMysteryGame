@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
+  m_Name: NewBoyfriend
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  RootNode:
+    dialogueText: whats up man
+    responses:
+    - responseText: 'did you happen to see a missing boy around here '
+      nextNode:
+        dialogueText: 'no me and rliey did see a boy next to the monument before
+          meeting up with her friends '
+        responses:
+        - responseText: 'alright thanks for the information '
+          nextNode:
+            dialogueText: 
+            responses: []
+        - responseText: 'oh. so are you and riley together? '
+          nextNode:
+            dialogueText: 'ya we have been for around 3 months now '
+            responses:
+            - responseText: 'okay have a good night then '
+              nextNode:
+                dialogueText: 
+                responses: []
+            - responseText: 'you know that gloomy looking fellow in the corner '
+              nextNode:
+                dialogueText: 'ya that was the guy she talked to before we sat down '
+                responses:
+                - responseText: 'have a great night '
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                - responseText: 'sad '
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+    - responseText: 
+      nextNode:
+        dialogueText: 
+        responses: []
