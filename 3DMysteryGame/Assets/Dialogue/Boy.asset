@@ -10,16 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
-  m_Name: Npc 1
+  m_Name: Boy
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   RootNode:
-    dialogueText: you ever listen to my music?
+    dialogueText: 'are you alright '
     responses:
-    - responseText: 'no '
+    - responseText: ya go get him he's getting away.
       nextNode:
-        dialogueText: It's just one of those days then.
-        responses: []
-    - responseText: 'ya you make great music man '
-      nextNode:
-        dialogueText: 'great now leave me alone '
+        dialogueText: ' '
         responses: []

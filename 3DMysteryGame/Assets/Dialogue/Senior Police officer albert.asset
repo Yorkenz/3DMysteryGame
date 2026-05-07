@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Senior Police officer albert
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   RootNode:
-    dialogueText: 
+    dialogueText: 'Hey mark how have you been! '
     responses:
-    - responseText: '"Really?"'
+    - responseText: good how about you!
       nextNode:
-        dialogueText: 'I uh.... I think it was you uh.... '
+        dialogueText: 'dandy, unfortunitly there is a missing child that was reported
+          to use 5 minutes ago and we need you to look into it the killer might still
+          be near, be careful. '
         responses:
-        - responseText: '"huh?"'
+        - responseText: 'of course '
           nextNode:
             dialogueText: I found HiM!!! I Fou..............
             responses:
@@ -27,21 +29,52 @@ MonoBehaviour:
               nextNode:
                 dialogueText: Who are you again?
                 responses: []
-    - responseText: 'Well. I think you found him... '
-      nextNode:
-        dialogueText: I knew it, you were the famous detective i've seen around.
-        responses:
-        - responseText: Well, If you don't mind, would mind helping me out with this
-            missing child per chance?
+        - responseText: anymore information
           nextNode:
-            dialogueText: Oh, I Know About this child....
+            dialogueText: ' ya, check over by the moneument and ask them. That was
+              where the report came in from. '
             responses:
-            - responseText: '"what info do you got on him?"'
+            - responseText: Thanks i'll get on it.
               nextNode:
-                dialogueText: He'd play around the park with a ball of sorts....
-                  but all i remember seeing is thhe ball now....
+                dialogueText: 
+                responses: []
+    - responseText: not so good man.
+      nextNode:
+        dialogueText: really? well sorry to sour the mood even more but we got a
+          case that we need you for.
+        responses:
+        - responseText: It's alright lets hear it.
+          nextNode:
+            dialogueText: there is a missing child that was reported to use 5 minutes
+              ago and we need you to look into it the killer might still be near
+              by.
+            responses:
+            - responseText: 'Anymore information '
+              nextNode:
+                dialogueText: ' ya check over by the moneument and ask them. That
+                  was where the report came in from. '
                 responses:
-                - responseText: Alright,find a ball it is then.
+                - responseText: I'll get on it
                   nextNode:
-                    dialogueText: Give me ye autograph when you finish.
+                    dialogueText: 
                     responses: []
+            - responseText: I'll get on it
+              nextNode:
+                dialogueText: 
+                responses: []
+        - responseText: 'I don''t wanna '
+          nextNode:
+            dialogueText: there is a missing child that was reported to use 5 minutes
+              ago and we need you to look into it the killer might still be near
+              by.
+            responses:
+            - responseText: nu uh
+              nextNode:
+                dialogueText: ' Get the hell out of here and do your job before you
+                  lose it! these younger guys don''t do anything now a days right
+                  bartender.'
+                responses: []
+            - responseText: 'fine... can i get a drink first '
+              nextNode:
+                dialogueText: NO get the hell out of here and do your job!
+                responses: []

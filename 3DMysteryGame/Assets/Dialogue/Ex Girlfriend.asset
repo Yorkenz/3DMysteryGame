@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
+  m_Name: Ex Girlfriend
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  RootNode:
+    dialogueText: What do you want.
+    responses:
+    - responseText: 'have you seen a child around here recently '
+      nextNode:
+        dialogueText: 'no now get away '
+        responses: []
+    - responseText: 'can i sit with you and tak '
+      nextNode:
+        dialogueText: 'No i don''t even know you '
+        responses: []
+    - responseText: 'Do you know my boy gerbert '
+      nextNode:
+        dialogueText: 'ya how do you know '
+        responses:
+        - responseText: 'good question how do i know '
+          nextNode:
+            dialogueText: 'why are you asking me '
+            responses:
+            - responseText: bye
+              nextNode:
+                dialogueText: 
+                responses: []
+        - responseText: 'i talked with him and he said that he wan''t to break up
+            with you '
+          nextNode:
+            dialogueText: 'What!? alright bye then get out of my face '
+            responses:
+            - responseText: 'gladly '
+              nextNode:
+                dialogueText: 
+                responses: []
+            - responseText: 'just kidding '
+              nextNode:
+                dialogueText: 'thats not even funny leave '
+                responses:
+                - responseText: 'bye '
+                  nextNode:
+                    dialogueText: 
+                    responses: []

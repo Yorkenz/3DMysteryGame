@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
+  m_Name: Old Martha
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  RootNode:
+    dialogueText: 'good evening sunny '
+    responses:
+    - responseText: 'good evening ma''am have you seen a young boy around here recently '
+      nextNode:
+        dialogueText: 'you know i dont have that great of a memory like a used to
+          but i can give you a secret recipe that not even my grandkids know about '
+        responses:
+        - responseText: 'sure what is it '
+          nextNode:
+            dialogueText: 'nope if my grandkids don''t even know why would i tell
+              you '
+            responses:
+            - responseText: 'okay then have a good night '
+              nextNode:
+                dialogueText: 
+                responses: []
+        - responseText: i'm afraid not i have to look for the boy
+          nextNode:
+            dialogueText: 'alright sunny don''t stay in the rain too long  '
+            responses:
+            - responseText: 'thank you ma''am have a good night '
+              nextNode:
+                dialogueText: 
+                responses: []

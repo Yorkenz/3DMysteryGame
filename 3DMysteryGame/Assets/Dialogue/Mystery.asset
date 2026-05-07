@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
+  m_Name: Mystery
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  RootNode:
+    dialogueText: The boy is not here
+    responses:
+    - responseText: 'how did you know i was looking for a boy '
+      nextNode:
+        dialogueText: ...
+        responses:
+        - responseText: 'alright buddy your under arrest '
+          nextNode:
+            dialogueText: ...
+            responses:
+            - responseText: 'just walk away '
+              nextNode:
+                dialogueText: 
+                responses: []
+            - responseText: 'please walk away '
+              nextNode:
+                dialogueText: ...
+                responses:
+                - responseText: 'creepy i think i''m going to leave now '
+                  nextNode:
+                    dialogueText: ...
+                    responses: []
+        - responseText: 'alright buddy your under arrest '
+          nextNode:
+            dialogueText: ...
+            responses:
+            - responseText: 'walk away '
+              nextNode:
+                dialogueText: 
+                responses: []
+    - responseText: 'okay thanks '
+      nextNode:
+        dialogueText: 
+        responses: []

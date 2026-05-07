@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef57125dbe48847a0f3fc1640f1742, type: 3}
+  m_Name: hint giver
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  RootNode:
+    dialogueText: 'Hello officer what can i do for you '
+    responses:
+    - responseText: 'have you seen a child around here recently '
+      nextNode:
+        dialogueText: 'yes actually i have i reember seeing him playing with a ball
+          but his dad came to get him or so i geuss '
+        responses:
+        - responseText: 'do you know where they went off to '
+          nextNode:
+            dialogueText: 'no i don''t recall where they went '
+            responses: []
+    - responseText: 'your under arrest '
+      nextNode:
+        dialogueText: 'for what '
+        responses:
+        - responseText: 'nerver mind that  i could let you off the hook if you tell
+            me where the kid went '
+          nextNode:
+            dialogueText: 'You mean the kid with the red ball '
+            responses:
+            - responseText: 'yes! '
+              nextNode:
+                dialogueText: 'he went to the left pathway i don''t know anything
+                  more '
+                responses: []
+            - responseText: 'no! '
+              nextNode:
+                dialogueText: 'then what kid? '
+                responses:
+                - responseText: Of course the kid with the red ball!
+                  nextNode:
+                    dialogueText: 'he went to the left pathway i don''t know anything
+                      more '
+                    responses: []
